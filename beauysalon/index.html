@@ -54,6 +54,19 @@
                         <input type="tel" id="phone" class="field" name="data[Телефон]" required>
                     </div>
                     <div class="form-row">
+                        <label>Выберите мастера</label>
+                        <div class="select">
+
+                            <select id="select1" class="field" name="data[Мастер]" onfocus="this.size=4" onblur='this.size=1;'
+                                onchange='this.size=1; this.blur();'>
+                                <option selected disabled>Мастер не выбран</option>
+                                <option value="Стрижка челки">Анна</option>
+                                <option value="Стрижка модельная">Наталья</option>
+                                <option value="Стрижка для маленьких леди">Евгения</option>
+                               
+
+                            </select>
+                        </div>
                         <label class="form-label">Выберите услугу</label>
                         <div class="select">
 
@@ -170,24 +183,74 @@
     <section class="masters">
 
         <h1>Наши мастера</h1>
-        <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-              ...
+        <div class="card-container">
+            <div class="card">
+                <div class="card-image">
+                    <img class="img card-logo" src="./img/master1.jpg">
+                </div>
+                <div class="card-title">
+                    <p>Наталья</p>
+                </div>
+                <div class="card-sub " id="test">
+                    <p>Проффесиональный парикмахер</p>
+                    <br>
+                </div>
+              
+                <div class="btn-card">
+                    <a class="btn open-popup" href="#">Подробнее</a>
+                </div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-          
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          
-            <!-- If we need scrollbar -->
+            <div class="card">
+                <div class="card-image">
+                    <img class="img card-logo" src="./img/master1.jpg">
+                </div>
+                <div class="card-title">
+                    <p>Наталья</p>
+                </div>
+                <div class="card-sub " id="test">
+                    <p>Проффесиональный парикмахер</p>
+                    <br>
+                </div>
+              
+                <div class="btn-card">
+                    <a class="btn open-popup" href="#">Подробнее</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img class="img card-logo" src="./img/master1.jpg">
+                </div>
+                <div class="card-title">
+                    <p>Наталья</p>
+                </div>
+                <div class="card-sub " id="test">
+                    <p>Проффесиональный парикмахер</p>
+                    <br>
+                </div>
+              
+                <div class="btn-card">
+                    <a class="btn open-popup" href="#">Подробнее</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img class="img card-logo" src="./img/master1.jpg">
+                </div>
+                <div class="card-title">
+                    <p>Наталья</p>
+                </div>
+                <div class="card-sub " id="test">
+                    <p>Проффесиональный парикмахер</p>
+                    <br>
+                </div>
+              
+                <div class="btn-card">
+                    <a class="btn open-popup" href="#">Подробнее</a>
+                </div>
+            </div>
+
            
+            </div>
         </div>
 
 

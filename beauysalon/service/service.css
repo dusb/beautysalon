@@ -55,16 +55,16 @@
  }
 
  header button {
-    padding: 9px;
-    background-color: rgba(0, 0, 0, 0.993);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-    color: rgb(255, 255, 255);
-    font-size: 20px;
+     padding: 9px;
+     background-color: rgba(0, 0, 0, 0.993);
+     border: none;
+     border-radius: 50px;
+     cursor: pointer;
+     transition: all 0.3s ease 0s;
+     color: rgb(255, 255, 255);
+     font-size: 20px;
 
-}
+ }
 
  button:hover {
      background-color: rgba(0, 0, 0, 0);
