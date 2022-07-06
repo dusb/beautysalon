@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>AOS.init()</script>
+
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <a href="#" class="logo">Брэнд</a>
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="./service/service.html">Услуги</a></li>
+
+                <li><a href="./contacts/contact.html">Контакты</a></li>
+                <li><button class="open-popup">Онлайн запись</button></li>
+            </ul>
+        </nav>
+
+
+
+
+        <section class="popup-bg">
+            <div class="popup">
+                <div class="close-popup">X</div>
+                <h1>Записаться к нам</h1>
+                <form class="myForm" action="https://sheetdb.io/api/v1/1h5jefq0l7m67" method="POST" id="form">
+                    <div class="form-row">
+                        <label class="form-label">Ваше имя</label>
+                        <input type="text" class="field" name="data[Имя]" placeholder="Например, Анна" required>
+                    </div>
+                    <div class="form-row">
+                        <label class="form-label">Ваш телефон</label>
+                        <input type="tel" id="phone" class="field" name="data[Телефон]" required>
+                    </div>
+                    <div class="form-row">
+                        <label class="form-label">Выберите услугу</label>
+                        <div class="select">
+
+                            <select class="field" name="data[Услуга]" onfocus="this.size=4" onblur='this.size=1;'
+                                onchange='this.size=1; this.blur();'>
+                                <option selected disabled>Услуга не выбрана</option>
+                                <option value="Стрижка челки">Стрижка челки</option>
+                                <option value="Стрижка модельная">Стрижка модельная</option>
+                                <option value="Стрижка для маленьких леди">Стрижка для
+                                    маленьких леди</option>
+                                <option value="Свадебная прическа">Свадебная прическа</option>
+                                <option value="Укладка волос (брашинг)">Укладка волос (брашинг)
+                                </option>
+                                <option value="Окрашивание прикореновой зоны L`Oreal Professionnel">Окрашивание
+                                    прикореновой
+                                    зоны</option>
+                                <option value="Тонирование L`Oreal Professionnel">Тонирование
+                                    L`Oreal Professionnel</option>
+                                <option value="астичное мелирование">Частичное мелирование
+                                </option>
+                                <option value="Наращивание волос">Наращивание волос</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="form-label">Выберите дату</label>
+                        <input type="date" id="start" name="data[Дата]" value="2022-06-8" min="2022-06-08"
+                            max="2022-12-31">
+                    </div>
+                    <div class="field">
+                        <label class="form-label">Выберите время</label>
+                        <input type="time" id="appt" name="data[Время]" value="10:00" min="10:00" max="18:00">
+                    </div>
+                    <button type="submit" id="submit-form">Записаться</button>
+                </form>
+            </div>
+        </section>
+
+
+
+
+
+
+    </header>
+
+    <!-- home -->
+    <section class="home">
+        <p>
+            Создай свой новый яркий образ<br>вместе с нами
+        <p>
+
+
+    </section>
+
+    <!-- about us -->
+    <section class="about">
+        <div class="row">
+            <div class="img">
+                <img src="img/about.jpg">
+            </div>
+
+            <div class="content">
+                <h3>Почему именно мы?</h3>
+                <p>Наша миссия — открыть уникальность клиентов. Мы индивидуально подходим к каждому поситителю и особо
+                    внимательно относимся ко всем пожеланиям.
+                    Мы предоставляем такие услуги, как стрижка, укладка, окрашивание, наращивание волос, свадебные
+                    прически.
+                    У нас работают сертифицированные мастера своего дела.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- services -->
+    <section class="service">
+        <h1 class="serv-title">Наши услуги</h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="img/box-1.jpg">
+                <div class="info">
+                    <h3>Стрижка</h3>
+                    <p>Детская стрижка, короткая стрижка, средняя стрижка, длинная стрижка, стрижка челки!</p>
+                    <a href="./service/service.html"><button class="service-btn">Посмотреть</button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="img/box-2t.jpg">
+
+                <div class="info">
+                    <h3>Окрашивание</h3>
+                    <p>Тонирование, колорирование, мелирование, балаяж</p>
+                    <a href="./service/service.html"><button class="service-btn">Посмотреть</button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="img/box-3t.jpg">
+                <div class="info">
+                    <h3>Укладки</h3>
+                    <p>Воздушные, холодные, горячие, мелкие и структурные кудряшки, укладки с хвостом</p>
+                    <a href="./service/service.html"><button class="service-btn">Посмотреть</button></a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+    <section class="masters">
+
+        <h1>Наши мастера</h1>
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          
+            <!-- If we need scrollbar -->
+           
+        </div>
+
+
+
+
+
+
+    </section>
+
+
+    <section class="label-title">
+        <div class="parent">
+            <div class="text">«<span class="label-subtitle">Красота</span> — это нечто не зависящее<br> от вкусов и
+                суждений.»
+            </div>
+            <img class="image" src="./img/label.png" />
+        </div>
+
+
+    </section>
+
+
+
+
+
+    <!-- our brands -->
+    <section class="brand">
+        <h3>Бренды которые мы используем</h3>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="brands swiper-slide"><img src="img/brands1.png" alt=""></div>
+                <div class="brands swiper-slide"><img src="img/brands2.png" alt=""></div>
+                <div class="brands swiper-slide"><img src="img/brands3.png" alt=""></div>
+                <div class="brands swiper-slide"><img src="img/brands6.png" alt=""></div>
+                <div class="brands swiper-slide"><img src="img/brand6.jpg" alt=""></div>
+                <div class="brands swiper-slide"><img src="img/brands5.png" alt=""></div>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Брэнд</h3>
+                <p>Салон красоты в Ростове-на-Дону</p>
+            </div>
+            <div class="box">
+                <h3>Навигация</h3>
+                <a href="">Главная</a>
+                <a href="../fulldip/service/service.html">Наши услуги</a>
+                <a href="../fulldip/contacts/contact.html">Контакты</a>
+            </div>
+            <div class="box">
+                <h3>График работы</h3>
+                <a href="">Понедельника - Пятница</a>
+                <a href="">с 10:00 до 19:00</a>
+                <a href="">Суббота - Воскренье</a>
+                <a href="">с 10:00 до 18:00</a>
+            </div>
+            <div class="box">
+                <h3>Наши контакты</h3>
+                <a href="whatsapp://send?phone=89957585519&text=Здравствуйте! Мне бы хотелось">Whatsapp</a>
+                <a href="tel:+79957585519">Телефон</a>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jquery link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- jquery maskedinput -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+        type="text/javascript"></script>
+    <!-- js file link -->
+    <script src="main.js"></script>
+    <!-- jquery ui/datepicker -->
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <!-- swiperJs link -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: "swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            breakpoint: {
+                1024: {
+                    slidesPerView: 3,
+                },
+                640: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 1,
+                }
+
+            },
+
+        });
+    </script>
+
+</body>
+
+</html>
