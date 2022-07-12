@@ -224,6 +224,13 @@ header #menu {
     border-radius: 30px;
 }
 
+/* show service and masters */
+
+#step2{
+    display: none;
+}
+
+
 
 
 
