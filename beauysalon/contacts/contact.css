@@ -117,6 +117,127 @@ header #menu {
     display: none;
 }
 
+/* import font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+
+
+/* ::-webkit-scrollbar {
+    display: none;
+} */
+
+
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .2 linear;
+    outline: none;
+    text-decoration: none;
+}
+
+::selection {
+    
+    color: rgb(0, 0, 0);
+}
+
+html {
+    font-size: 62%;
+    overflow-x: hidden;
+}
+
+.serv-title {
+    display: inline-block;
+    color: #333;
+    margin: 32px 0;
+    padding: 16px 0;
+    padding-top: 100px;
+    font-size: 40px;
+    border-bottom: 3px solid black;
+}
+
+/* nav-bar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    z-index: 1000;
+    padding: 24px 9%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .1);
+}
+
+header button {
+    padding: 9px;
+    background-color: rgba(0, 0, 0, 0.993);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+}
+
+
+
+header.active {
+    background: #fff;
+    box-shadow: 1.5px 5px rgba(0, 0, 0, .3);
+}
+
+header.header.active .logo,
+header.header.active .navbar a {
+    color: #333;
+}
+
+header .logo {
+    font-size: 40px;
+    color: var(--blue);
+    width: 500px;
+}
+
+header .navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+header .navbar ul li {
+    margin-left: 48px;
+
+}
+
+header .navbar ul li a {
+    color: #333;
+    font-size: 28px;
+    white-space: nowrap;
+}
+
+header .navbar ul li a.active,
+header .navbar ul li a:hover {
+    color: var(--orange);
+}
+
+header #menu {
+    font-size: 48px;
+    color: black;
+    cursor: pointer;
+    display: none;
+}
+
 /* pop up windown */
 .popup-bg {
     position: fixed;
@@ -208,9 +329,7 @@ header #menu {
     font-size: 18px;
 }
 
-.no-scroll {
-    overflow-y: hidden;
-}
+
 
 .field {
     width: 100%;
@@ -223,6 +342,13 @@ header #menu {
     transition: .3s;
     border-radius: 30px;
 }
+
+/* show service and masters */
+
+#step2{
+    display: none;
+}
+
 
 /* edit maps */
 .map {

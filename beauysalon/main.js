@@ -14,7 +14,7 @@ $('#menu').click(function () {
 // modal window
 $('.open-popup').click(function (e) {
   e.preventDefault();
-   $('.popup-bg').fadeIn(500);
+  $('.popup-bg').fadeIn(500);
 });
 
 
@@ -28,63 +28,57 @@ $(document).ready(function () {
 });
 
 
-// sheetdb
-// const form = document.getElementById('form');
-// form.addEventListener("submit", e => {
-//   e.preventDefault();
-//   fetch(form.action, {
-//     method: "POST",
-//     body: new FormData(form),
-//   }).then(
-//     response => response.json(),
-//     form.reset(),
-//     alert('Ваша заявка принята')
-
-//   )
-// });
 
 
-const form = document.getElementById('form')
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwGILagAkK9r-yKzx_HgY5xXFMd0Ml1O0-aXHkENEd9Waj-J0SGY7OJ5ZLOUfDJ844F/exec'
 
-form.addEventListener('submit', e => {
-  e.preventDefault()
-
-  console.log(form)
-  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-  .then(
-        response => response.json(),
-        form.reset(),
-        alert('Ваша заявка принята')
-    
-      )
-    .catch(error => alert('Error!', error.message))
-})
 
 // showservice
-$('#select1').change(function(){
+$('#select1').change(function () {
   const val = $(this).val();
-  
-  
-  
-  if($('#' + val).length){
+
+
+
+  if ($('#' + val).length) {
     $('#step2').show();
     $('#allshow').hide();
-     
+
     $('#step2 select').hide();
-    
+
     $('#' + val).show();
-    
-  }else if(val == 'all'){
-    
+
+  } else if (val == 'all') {
+
     $('#allshow').show();
     $('#step2').hide();
   }
 })
 
-const url = 'https://script.google.com/macros/s/AKfycbwGILagAkK9r-yKzx_HgY5xXFMd0Ml1O0-aXHkENEd9Waj-J0SGY7OJ5ZLOUfDJ844F/exec';
 
 
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxtHa6HriiYbtjTv98-a-pkGpyayqFC_gMAJbVhofFuzJ8VCjoK2S7gMnx55O9o7YKmwg/exec'
+const form = document.querySelector('#form')
+const btn = document.querySelector('#submit')
+
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  btn.disabled = true
+  btn.innerHTML = "Отправляем..."
+
+  console.log(form)
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => {
+      btn.disabled = false
+      btn.innerHTML = "Ваша заявка принята"
+      alert('Ваша заявка принята', response)
+      form.reset()
+    })
+    .catch(error => {
+      btn.disabled = false
+      btn.innerHTML = "Submit"
+      alert('Ошибочка, попробуйте снова:(', error.message)
+    })
+})
 
 
 

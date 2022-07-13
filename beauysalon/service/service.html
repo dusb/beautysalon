@@ -41,20 +41,38 @@
             <div class="popup">
                 <div class="close-popup">X</div>
                 <h1>Записаться к нам</h1>
-                <form class="myForm" action="https://sheetdb.io/api/v1/1h5jefq0l7m67" method="POST" id="form">
+                <form class="myForm" id="form">
                     <div class="form-row">
                         <label class="form-label">Ваше имя</label>
-                        <input type="text" class="field" name="data[Имя]" placeholder="Например, Анна" required>
+                        <input type="text" class="field" name="Имя" placeholder="Например, Анна" required>
                     </div>
                     <div class="form-row">
                         <label class="form-label">Ваш телефон</label>
-                        <input type="tel" id="phone" class="field" name="data[Телефон]" required>
+                        <input type="tel" id="phone" class="field" name="Телефон" required>
                     </div>
                     <div class="form-row">
+                        <label>Выберите мастера</label>
+                        <div class="select">
+
+                            <select id="select1" class="field" name="Мастер" onfocus="this.size=4" onblur='this.size=1;'
+                                onchange='this.size=1; this.blur();'>
+                                <option selected disabled>Мастер не выбран</option>
+                                <option value="Anna">Анна</option>
+                                <option value="Natasha">Наталья</option>
+                                <option value="Mary">Мария</option>
+                                <option value="all">Показать услуги всех мастеров</option>
+
+
+                            </select>
+                        </div>
+
+
+
+
                         <label class="form-label">Выберите услугу</label>
                         <div class="select">
 
-                            <select class="field" name="data[Услуга]" onfocus="this.size=4" onblur='this.size=1;'
+                            <select id="allshow" class="field" name="Услуга" onfocus="this.size=4" onblur='this.size=1;'
                                 onchange='this.size=1; this.blur();'>
                                 <option selected disabled>Услуга не выбрана</option>
                                 <option value="Стрижка челки">Стрижка челки</option>
@@ -75,21 +93,52 @@
 
                             </select>
                         </div>
+                        <div class="select" id="step2" name="Услуга">
+                            <select class="field" id="Anna">
+                                <option selected disabled>Выберите услгу мастера</option>
+                                <option>Наращивание ногтей</option>
+                                <option>Маникюр</option>
+                                <option>Педикюр</option>
+                                <option>Японский маникюр</option>
+
+
+                            </select>
+                            <select id="Natasha" class="field" name="Услуга">
+                                <option selected disabled>Выберите услгу мастера</option>
+                                <option>Чистка лица</option>
+                                <option>Ультра звуковая чиста</option>
+                                <option>Механическая чистка лица</option>
+                                <option>Атравматичная чистка лица</option>
+
+
+                            </select>
+                            <select id="Mary" class="field" name="Услуга">
+                                <option selected disabled>Выберите услгу мастера</option>
+                                <option>Модельная стрижка</option>
+                                <option>Наращивание волос</option>
+                                <option>Укладка</option>
+                                <option>Стрижка челки</option>
+                                <option>Частичное мелирование</option>
+
+                            </select>
+
+                        </div>
+
+
                     </div>
+
                     <div class="field">
                         <label class="form-label">Выберите дату</label>
-                        <input type="date" id="start" name="data[Дата]" value="2022-06-8" min="2022-06-08"
-                            max="2022-12-31">
+                        <input type="date" id="start" name="Дата" value="2022-06-8" min="2022-06-08" max="2022-12-31">
                     </div>
                     <div class="field">
                         <label class="form-label">Выберите время</label>
-                        <input type="time" id="appt" name="data[Время]" value="10:00" min="10:00" max="18:00">
+                        <input type="time" id="appt" name="Время" value="10:00" min="10:00" max="18:00">
                     </div>
-                    <button type="submit">Записаться</button>
+                    <button type="submit" id="submit">Записаться</button>
                 </form>
             </div>
         </section>
-
 
 
 
